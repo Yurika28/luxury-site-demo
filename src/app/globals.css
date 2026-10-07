@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Maré Caribe tokens — see the Design canvas, Main board */
+@theme {
+  --color-sand: #F5EDE1;
+  --color-paper: #FBF6EC;
+  --color-shell: #EADDC9;
+  --color-hairline: #DCCDB5;
+  --color-field: #8C7B6B;
+  --color-espresso: #2A1F1A;
+  --color-terracotta: #B04E2B;
+  --color-clay: #EBCDB8; /* fill only, never text */
+  --color-muted: #5A4A40;
+  --color-error: #A3281E;
+  --color-dusk: #3A2A22;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", serif;
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+}
+
+:root { color-scheme: light; }
+
+body {
+  background: var(--color-sand);
+  color: var(--color-espresso);
+  font-family: var(--font-sans);
+}
+
+/* Display type is 28px and above only */
+.font-display { font-weight: 500; }
+
+:focus-visible {
+  outline: 3px solid var(--color-espresso);
+  outline-offset: 2px;
+}
+
+/* Skeleton: opacity-only pulse */
+@keyframes mc-pulse { 0%, 100% { opacity: 1 } 50% { opacity: .45 } }
+.sk { background: var(--color-shell); animation: mc-pulse 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
