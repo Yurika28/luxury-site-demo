@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@rolldown/binding-win32-x64-msvc": "^1.2.12",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/jest-dom": "^7.0.1",
@@ -40,5 +39,8 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.3"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-win32-x64-msvc": "^1.2.12"
   }
 }
